@@ -48,74 +48,135 @@ potencia = 2**2
 print(f'potencia = {potencia}')
 
 # @ → multiplicación matricial
+import numpy as np
+a = np.array([
+    [1, 2],
+    [3, 4]
+])
+b = np.array([
+    [5, 6],
+    [7, 8]
+])
 
-'''
+mult_matricial = a @ b
+print(f'multiplicación matricial = \n{mult_matricial}\n')
 
 
 
+# Operadores de asignación
+# = → asignación simple
+asign_simple = 'se asigna de forma simple este string a la varible'
+print(f'Asignación simple a variable asing_simple = {asign_simple}')
+
+# += → suma y asigna
+numero = 1
+numero += 1
+print(f'numero con suma y asigna = {numero}')
+
+# -= → resta y asigna
+numero -= 2
+print(f'numero resta y asigna = {numero}')
+
+# *= → multiplica y asigna
+numero += 10
+numero *= 2
+print(f'numero multiplica y asigna = {numero}')
+
+# /= → divide y asigna
+numero /= 4
+print(f'numero divide y asigna = {numero}')
+
+# //= → división entera y asigna
+numero //= 4
+print(f'numero divide y asigna = {numero}')
+
+# %= → módulo y asigna
+numero = 10
+numero %= 4
+print(f'numero modulo y asigna = {numero}')
+
+# **= → potencia y asigna
+numero **= 2
+print(f'numero potencia y asigna = {numero}')
+
+# @= → multiplicación matricial y asigna
+m1 = np.array([
+    [1, 2],
+    [3, 4]
+])
+m2 = np.array([
+    [5, 6],
+    [7, 8]
+])
+
+m1 @= m2
+print(f'multiplicación matricial y asigna = \n{m1}\n')
 
 
+# &= → AND bit a bit y asigna
+# |= → OR bit a bit y asigna
+# ^= → XOR bit a bit y asigna
+
+# = → desplazamiento derecha y asigna
+# <<= → desplazamiento izquierda y asigna
+# := → operador walrus (asigna dentro de una expresión)
 
 
-Operadores de asignación
-= → asignación simple
-+= → suma y asigna
--= → resta y asigna
-*= → multiplica y asigna
-/= → divide y asigna
-//= → división entera y asigna
-%= → módulo y asigna
-**= → potencia y asigna
-@= → multiplicación matricial y asigna
-&= → AND bit a bit y asigna
-|= → OR bit a bit y asigna
-^= → XOR bit a bit y asigna
+# Operadores de comparación
+# == → igual a
+nombre1 = 'ivan'
+nombre2 = 'juan'
+print (f'operador igual a = {nombre1 == nombre2}')
 
-= → desplazamiento derecha y asigna
-<<= → desplazamiento izquierda y asigna
-:= → operador walrus (asigna dentro de una expresión)
+# != → distinto de
+print (f'operador distinto de = {nombre1 != nombre2}')
 
-Operadores de comparación
-== → igual a
-!= → distinto de
+# > → mayor que
+num1 = 10
+num2 = 12
+print(f'el numero {num1} > {num2} = {num1 > num2}')
 
-→ mayor que
-< → menor que
-= → mayor o igual
-<= → menor o igual
+# < → menor que
+print(f'el numero {num1} < {num2} = {num1 < num2}')
 
-Operadores lógicos
-and → AND lógico
-or → OR lógico
-not → negación lógica
+# >= → mayor o igual
+print(f'el numero {num1} >= {num2} = {num1 >= num2}')
 
-Operadores de identidad
-is → verifica si son el mismo objeto
-is not → verifica si no son el mismo objeto
+# <= → menor o igual
+print(f'el numero {num1} <= {num2} = {num1 <= num2}')
 
-Operadores de pertenencia
-in → verifica pertenencia
-not in → verifica no pertenencia
+# Operadores lógicos
+# and → AND lógico
+# or → OR lógico
+# not → negación lógica
 
-Operadores bit a bit
-& → AND bit a bit
-| → OR bit a bit
-^ → XOR bit a bit
-~ → NOT bit a bit (inversión)
-<< → desplazamiento izquierda
+# Operadores de identidad
+# is → verifica si son el mismo objeto
+# is not → verifica si no son el mismo objeto
 
-→ desplazamiento derecha
+# Operadores de pertenencia
+# in → verifica pertenencia
+# not in → verifica no pertenencia
 
-Operador condicional (ternario)
-x if condicion else y → devuelve un valor según una condición
+# Operadores bit a bit
+# & → AND bit a bit
+# | → OR bit a bit
+# ^ → XOR bit a bit
+# ~ → NOT bit a bit (inversión)
+# << → desplazamiento izquierda
 
-Operadores estructurales / de acceso
-. → acceso a atributos
-[] → indexación o acceso por clave
-() → llamada a función
-: → definición de bloques
-, → separador / creación de tuplas
+# → desplazamiento derecha
 
-→ desempaquetado
-** → desempaquetado de diccionarios
-'''
+# Operador condicional (ternario)
+# x if condicion else y → devuelve un valor según una condición
+
+# Operadores estructurales / de acceso
+# . → acceso a atributos
+# [] → indexación o acceso por clave
+# () → llamada a función
+# : → definición de bloques
+# , → separador / creación de tuplas
+
+# → desempaquetado
+# ** → desempaquetado de diccionarios
+
