@@ -192,20 +192,92 @@ print(f'numbit1 XOR numbit2 = {bin(numbit1 ^ numbit2)}')
 
 # ~ → NOT bit a bit (inversión)
 print(f'NOT numbit1 = {bin(~numbit1)}')
+print(f'NOT numbit1 con mascara = {bin(~numbit1 & 0b1111)}')
 
 # << → desplazamiento izquierda
+print(f'desplazamiento izquierda 1101 (numbit2) << 1 = {bin(numbit2 << 1)}')
+
 # → desplazamiento derecha
+print(f'desplazamiento derecha 1101 (numbit2) >> 2 = {bin(numbit2 >> 2)}')
 
 # Operador condicional (ternario)
 # x if condicion else y → devuelve un valor según una condición
+# variable = valor_si_es_verdadero if condicion else valor_si_es_falso
+vida = 100
+dano = 90
+vida = (vida-dano) if (vida-dano>0) else 0
+print(f'vida = {vida}')
 
 # Operadores estructurales / de acceso
 # . → acceso a atributos
+saludo = 'hola'
+print(f'Caso de uso del punto en un objeto, cambia texto a mayuscula = {saludo.upper()}')
+
 # [] → indexación o acceso por clave
+nombres = ['ivan', 'karen', 'andrea', 'michelle']
+print(f'Utilización de operador de acceso [1] = {nombres[1]}')
+print(f'Utilización de operador de acceso [1:3] = {nombres[1:3]}')
+nombres_dic = {'nombre': 'ivan', 'edad': 50}
+print(f'Acceso diccionario dato edad = {nombres_dic['edad']}')
+
 # () → llamada a función
+print('ejemplo de llamada a función print()')
+
 # : → definición de bloques
+if num1 == 1:
+    print('ejemplo de : como definición de bloque')
+else:
+    print('ejemplo de : como definición de bloque')
+
 # , → separador / creación de tuplas
+tupla = ('lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo')
+print(f'Imprime tupla = {tupla}')
 
-# → desempaquetado
+# * → desempaquetado
+print('desempaquetado tupla * = ', *tupla)
+
 # ** → desempaquetado de diccionarios
+dic = {**nombres_dic}
+print('ejemplo desempaquetado de dicicionario = ', dic)
 
+
+# ** ESTRUCTURAS DE CONTROL **
+
+# 1. ESTRUCTURAS CONDICIONALES
+# if: Evalúa una condición inicial.
+# elif: Evalúa condiciones adicionales si la anterior fue falsa.
+# else: Ejecuta un bloque si ninguna condición previa se cumplió.
+
+
+
+
+# 2. ESTRUCTURAS DE BUCLE (ITERATIVAS)
+# for: Itera sobre elementos de una secuencia o iterable.
+# while: Ejecuta un bloque mientras una condición sea verdadera.
+# 3. CONTROL DE FLUJO DENTRO DE BUCLES
+# break: Termina el bucle prematuramente.
+# continue: Salta a la siguiente iteración del bucle.
+# else (en bucles): Se ejecuta solo si el bucle terminó sin interrupción (sin break).
+# 4. GESTIÓN DE EXCEPCIONES
+# try: Bloque donde se intenta ejecutar código que puede fallar.
+# except: Captura y maneja errores específicos.
+# except*: Maneja grupos de excepciones (Python 3.11+).
+# else (en try): Se ejecuta si no hubo ninguna excepción.
+# finally: Bloque que se ejecuta siempre, ideal para limpieza.
+# raise: Lanza una excepción de forma manual.
+# assert: Verifica una condición y lanza AssertionError si es falsa.
+# 5. EMPAREJAMIENTO DE PATRONES ESTRUCTURALES (Python 3.10+)
+# match: Sujeto a comparar.
+# case: Patrón específico a evaluar.
+# 6. GESTIÓN DE CONTEXTO Y RECURSOS
+# with: Administra recursos (abrir/cerrar) de forma segura.
+# 7. CONTROL ASÍNCRONO (CONCURRENCIA)
+# async for: Itera sobre iterables asíncronos.
+# async with: Gestiona contextos asíncronos.
+# await: Pausa la ejecución hasta que una tarea asíncrona finalice.
+# 8. RETORNO Y GENERADORES
+# return: Sale de una función devolviendo un valor.
+# yield: Pausa una función devolviendo un valor (generador).
+# yield from: Delega la generación a otro iterable o subgenerador.
+# 9. OTROS
+# pass: Sentencia nula que sirve como marcador de posición.
