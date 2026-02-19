@@ -176,10 +176,22 @@ print(f'20 esta en lista1 = {20 in lista1}')
 print(f'20 NO esta en lista1 = {20 not in lista1}')
 
 # Operadores bit a bit
+numbit1 = 0b0101
+numbit2 = 0b1101
+print(f'numbit1 = {bin(numbit1)}')
+print(f'numbit2 = {bin(numbit2)}')
+
 # & → AND bit a bit
+print(f'numbit1 AND numbit2 = {bin(numbit1 & numbit2)}')
+
 # | → OR bit a bit
+print(f'numbit1 OR numbit2 = {bin(numbit1 | numbit2)}')
+
 # ^ → XOR bit a bit
+print(f'numbit1 XOR numbit2 = {bin(numbit1 ^ numbit2)}')
+
 # ~ → NOT bit a bit (inversión)
+print(f'NOT numbit1 = {bin(~numbit1)}')
 
 # << → desplazamiento izquierda
 # → desplazamiento derecha
