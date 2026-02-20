@@ -307,6 +307,7 @@ else:
 # try: Bloque donde se intenta ejecutar código que puede fallar.
 # except: Captura y maneja errores específicos.
 # else (en try): Se ejecuta si no hubo ninguna excepción.
+# finally: Bloque que se ejecuta siempre, ideal para limpieza.
 try:
     numerador = 10
     denominador = 10
@@ -315,12 +316,31 @@ except ZeroDivisionError:
     print ('no se puede dividir por 0')
 else:
     print('no hay error continua el resto del programa')
+finally:
+    print('esta parte del codigo siempre se ejecutará')
 
 # except*: Maneja grupos de excepciones (Python 3.11+).
-
-# finally: Bloque que se ejecuta siempre, ideal para limpieza.
 # raise: Lanza una excepción de forma manual.
+grupo = ExceptionGroup('fallos detectados',[
+    ValueError("Formato malo"),
+    TypeError("tipo no permitido"),
+    ValueError('dato mal'),
+    RuntimeError('el sistema fallo')
+])
+try:
+    raise grupo
+except* ValueError as eg:
+    print(f'Captura de errores: {eg.exceptions}')
+except* TypeError as eg:
+    print(f'Captura de errores: {eg.exceptions}')
+except* RuntimeError as eg:
+    print(f'Captura de errores: {eg.exceptions}')
+
+
 # assert: Verifica una condición y lanza AssertionError si es falsa.
+prueba_assert = 100
+print(f'prueba assert = {prueba_assert}')
+assert prueba_assert == 100, 'error, prueba assert debe ser 1000'
 
 
 
