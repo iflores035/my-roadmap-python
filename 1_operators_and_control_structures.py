@@ -244,40 +244,115 @@ print('ejemplo desempaquetado de dicicionario = ', dic)
 # ** ESTRUCTURAS DE CONTROL **
 
 # 1. ESTRUCTURAS CONDICIONALES
+var1 = 30
+var2 = 30
+
 # if: Evalúa una condición inicial.
+if var1 > var2:
+    print(f'condición IF: {var1} es mayor que {var2}')
+
 # elif: Evalúa condiciones adicionales si la anterior fue falsa.
+if var1 > var2:
+    print(f'condición IF: {var1} es mayor que {var2}')
+elif (var1 < var2):
+    print(f'condición IF: {var1} es menor que {var2}')
+
 # else: Ejecuta un bloque si ninguna condición previa se cumplió.
-
-
-
+if var1 > var2:
+    print(f'condición IF: {var1} es mayor que {var2}')
+elif (var1 < var2):
+    print(f'condición IF: {var1} es menor que {var2}')
+else:
+    print(f'los números {var1} y {var2} son iguales')
 
 # 2. ESTRUCTURAS DE BUCLE (ITERATIVAS)
 # for: Itera sobre elementos de una secuencia o iterable.
+for i in range(5):
+    print(i)
+
 # while: Ejecuta un bloque mientras una condición sea verdadera.
+j=0
+while j<=5:
+    print(j)
+    j+=1
+
+
 # 3. CONTROL DE FLUJO DENTRO DE BUCLES
 # break: Termina el bucle prematuramente.
+for i in range(10):
+    print(i)
+    if i == 5:
+        break
+print('buble terminado con break')
+
 # continue: Salta a la siguiente iteración del bucle.
+for i in range(10):
+    if i == 5:
+        print(f'nos saltamos la iteración {i}')
+        continue
+        
+    print(i)
+
 # else (en bucles): Se ejecuta solo si el bucle terminó sin interrupción (sin break).
+
+numeros = (10,11,3,5,6,)
+for i in numeros:
+    if i == 100:
+        print('numero 100 encontrado')
+else:
+    print('numero 100 no encontrado')
+
+
 # 4. GESTIÓN DE EXCEPCIONES
 # try: Bloque donde se intenta ejecutar código que puede fallar.
 # except: Captura y maneja errores específicos.
-# except*: Maneja grupos de excepciones (Python 3.11+).
 # else (en try): Se ejecuta si no hubo ninguna excepción.
+try:
+    numerador = 10
+    denominador = 10
+    sum = numerador / denominador
+except ZeroDivisionError:
+    print ('no se puede dividir por 0')
+else:
+    print('no hay error continua el resto del programa')
+
+# except*: Maneja grupos de excepciones (Python 3.11+).
+
 # finally: Bloque que se ejecuta siempre, ideal para limpieza.
 # raise: Lanza una excepción de forma manual.
 # assert: Verifica una condición y lanza AssertionError si es falsa.
+
+
+
+
+
 # 5. EMPAREJAMIENTO DE PATRONES ESTRUCTURALES (Python 3.10+)
 # match: Sujeto a comparar.
 # case: Patrón específico a evaluar.
+
+
+
+
 # 6. GESTIÓN DE CONTEXTO Y RECURSOS
 # with: Administra recursos (abrir/cerrar) de forma segura.
+
+
+
+
 # 7. CONTROL ASÍNCRONO (CONCURRENCIA)
 # async for: Itera sobre iterables asíncronos.
 # async with: Gestiona contextos asíncronos.
 # await: Pausa la ejecución hasta que una tarea asíncrona finalice.
+
+
+
+
 # 8. RETORNO Y GENERADORES
 # return: Sale de una función devolviendo un valor.
 # yield: Pausa una función devolviendo un valor (generador).
 # yield from: Delega la generación a otro iterable o subgenerador.
+
+
+
 # 9. OTROS
 # pass: Sentencia nula que sirve como marcador de posición.
