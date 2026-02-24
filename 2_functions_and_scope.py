@@ -111,7 +111,25 @@ datos = {'nombre': 'ivan',
 informacion_persona(**datos)
 
 # 7. Combinación de obligatorios, por defecto, *args y **kwargs
+def material(tipo, *args, **kwargs):
+    '''Imprime tipo de material, los repuestos y el nombre del cliente y dirección
+    
+    parameters:
+    tipo (str) = tipo de material (ej: repuesto)
+    *args (str) = repuestos que cliente comprará
+    **kwargs (str) = cliente y dirección del cliente
+    '''
+    print(f'tipo: {tipo}')
 
+    print('repuestos: ')
+    for rep in args:
+        print(f'--> {rep}')
+
+    for clave, valor in kwargs.items():
+        print(f'{clave}: {valor}')
+
+
+material('repuesto', 'aaa', 'bbb', 'ccc', cliente='BHP', direccion='sta mercedes')
 
 
 # 3️⃣ Funciones anidadas
