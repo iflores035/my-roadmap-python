@@ -1,0 +1,125 @@
+'''
+ * EJERCICIO:
+ * - Crea ejemplos de funciones básicas que representen las diferentes
+ *   posibilidades del lenguaje:
+ *   Sin parámetros ni retorno, con uno o varios parámetros, con retorno...
+ * - Comprueba si puedes crear funciones dentro de funciones.
+ * - Utiliza algún ejemplo de funciones ya creadas en el lenguaje.
+ * - Pon a prueba el concepto de variable LOCAL y GLOBAL.
+ * - Debes hacer print por consola del resultado de todos los ejemplos.
+ *   (y tener en cuenta que cada lenguaje puede poseer más o menos posibilidades)
+ *
+ * DIFICULTAD EXTRA (opcional):
+ * Crea una función que reciba dos parámetros de tipo cadena de texto y retorne un número.
+ * - La función imprime todos los números del 1 al 100. Teniendo en cuenta que:
+ *   - Si el número es múltiplo de 3, muestra la cadena de texto del primer parámetro.
+ *   - Si el número es múltiplo de 5, muestra la cadena de texto del segundo parámetro.
+ *   - Si el número es múltiplo de 3 y de 5, muestra las dos cadenas de texto concatenadas.
+ *   - La función retorna el número de veces que se ha impreso el número en lugar de los textos.
+ *
+ * Presta especial atención a la sintaxis que debes utilizar en cada uno de los casos.
+ * Cada lenguaje sigue una convenciones que debes de respetar para que el código se entienda.
+'''
+
+# =====================================================
+# 📌 TEMARIO UNIFICADO Y COMPLETO DE FUNCIONES EN PYTHON
+# =====================================================
+
+# 1️⃣ Conceptos Básicos de Funciones
+# - Definición con def
+# - Llamada / invocación de la función
+# - Bloque de código reutilizable
+# - Documentación con docstrings ("""comentario""")
+# - Diferencia entre función y procedimiento (retorna valor o no)
+
+# 2️⃣ Tipos de Funciones según parámetros y retorno
+# 1. Sin parámetros ni retorno
+# 2. Con uno o varios parámetros, sin retorno
+# 3. Con parámetros y retorno
+# 4. Con parámetros por defecto
+# 5. Con número variable de argumentos (*args)
+# 6. Con argumentos nombrados variables (**kwargs)
+# 7. Combinación de obligatorios, por defecto, *args y **kwargs
+
+# 3️⃣ Funciones anidadas
+# - Funciones dentro de funciones
+# - Encapsulamiento y visibilidad
+# - Uso de nonlocal para variables internas
+
+# 4️⃣ Variables en funciones
+# - Variables locales: existen solo dentro de la función
+# - Variables globales: definidas fuera de la función
+# - Uso de global para modificar variables globales
+# - Diferencia entre local, global y nonlocal
+
+# 5️⃣ Funciones lambda (anónimas)
+# - Funciones de una sola línea
+# - Uso con map, filter, sorted, reduce
+# - Diferencias con funciones normales
+
+# 6️⃣ Funciones incorporadas de Python (built-in)
+# - Funciones de tipo y estructura: len(), type(), range(), sorted()
+# - Funciones matemáticas: sum(), max(), min(), abs()
+# - Funciones de comprobación: isinstance(), all(), any()
+# - Otras útiles: enumerate(), zip(), reversed()
+
+# 7️⃣ Funciones recursivas
+# - Función que se llama a sí misma
+# - Caso base obligatorio
+# - Ejemplo clásico: factorial o Fibonacci
+
+# 8️⃣ Funciones como objetos
+# - Asignación de funciones a variables
+# - Paso de funciones como argumentos a otras funciones
+# - Retorno de funciones desde otras funciones
+
+# 9️⃣ Decoradores
+# - Concepto y sintaxis (@decorador)
+# - Decoradores con o sin parámetros
+# - Uso práctico para logging, validación o cronometraje
+
+# 10️⃣ Anotaciones y tipado
+# - Tipado de parámetros y retorno (->)
+# - Uso de typing para hints avanzados (List, Dict, Callable)
+
+# 11️⃣ Generadores y yield
+# - Funciones generadoras (yield)
+# - Iteración perezosa
+# - Delegación con yield from
+
+# 12️⃣ Funciones asíncronas
+# - async def y await
+# - async for, async with
+# - Integración con asyncio
+
+# 13️⃣ Ejercicio obligatorio (alineado al tuyo)
+# 1. Funciones básicas:
+#    - Sin parámetros ni retorno
+#    - Con parámetros, con y sin retorno
+#    - Con parámetros por defecto
+#    - Con *args y **kwargs
+# 2. Funciones dentro de funciones
+# 3. Uso de funciones built-in dentro de tus funciones
+# 4. Prueba de variables locales y globales
+# 5. Cada ejemplo debe imprimir resultados
+
+# 14️⃣ Ejercicio opcional / dificultad extra
+# - Función que recibe dos cadenas de texto y retorna un número
+# - Recorre números del 1 al 100:
+#   - Múltiplo de 3 → imprimir primer parámetro
+#   - Múltiplo de 5 → imprimir segundo parámetro
+#   - Múltiplo de 3 y 5 → imprimir concatenación
+#   - Si no es múltiplo → imprimir el número y contar cuántas veces ocurre
+# - Retorna el total de números impresos
+
+# 15️⃣ Extras recomendables para reforzar
+# - Decoradores simples
+# - Funciones lambda y map/filter
+# - Generadores para iteraciones grandes
+# - Funciones asíncronas para tareas concurrentes
+
+# 💡 Consejo de estudio:
+# 1. Repasa la teoría de cada sección.
+# 2. Escribe al menos un ejemplo práctico por cada punto.
+# 3. Usa print() para mostrar resultados y verificar comprensión.
+# 4. Avanza hacia los ejercicios obligatorios y luego al opcional.
