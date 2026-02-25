@@ -134,8 +134,43 @@ material('repuesto', 'aaa', 'bbb', 'ccc', cliente='BHP', direccion='sta mercedes
 
 # 3️⃣ Funciones anidadas
 # - Funciones dentro de funciones
-# - Encapsulamiento y visibilidad
 # - Uso de nonlocal para variables internas
+# - Encapsulamiento y visibilidad
+
+def externa():
+    '''llama función interna para imprimir
+    '''
+    def interna():
+        '''Imprime que tipo de función es
+        '''
+        print('soy una función interna anidada')
+
+    interna() 
+
+externa()
+
+
+def crea_sumador(*args):
+
+    suma = 0
+
+    def sumador(*valores):
+        for valor in valores:
+            nonlocal suma
+            suma += valor       
+        
+        return suma
+
+    sumador(*args)
+    return sumador
+
+#sumador(10,11,3,5,20) // esto genera error por que la función esta encapsulada
+
+s = crea_sumador()
+
+print(f'resultado = {s(10,11,3,5,20)}')
+print(f'resultado = {s(10)}')
+
 
 # 4️⃣ Variables en funciones
 # - Variables locales: existen solo dentro de la función
