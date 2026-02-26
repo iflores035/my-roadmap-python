@@ -226,14 +226,28 @@ print (f'variables local = {diflgn()}')
 
 # 5️⃣ Funciones lambda (anónimas)
 # - Funciones de una sola línea
+# - Diferencias con funciones normales
 suma = lambda numero: numero + 1
 print (f'suma = {suma(5)}')
 
 persona = lambda nombre, edad : print(f'Nombre: {nombre} edad: {edad}')
 persona('ivan', 50)
 
+resta = lambda a,b:a-b
+print(f'resta = {resta(10,5)}')
+
+
 # - Uso con map, filter, sorted, reduce
-# - Diferencias con funciones normales
+lista = [1,2,3,4,5]
+print(f'Imprime lista = {lista}')
+
+lista2 = list(map(lambda x:x+1, lista))
+print(f'Imprime lista sumando 1 = {lista2}')
+
+lista3 = sorted(lista2,reverse=True)
+print(f'Imprime lista = {lista3}')
+
+
 
 
 # 6️⃣ Funciones incorporadas de Python (built-in)
