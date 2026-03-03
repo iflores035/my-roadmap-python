@@ -252,9 +252,65 @@ print(f'Imprime lista = {lista3}')
 
 # 6️⃣ Funciones incorporadas de Python (built-in)
 # - Funciones de tipo y estructura: len(), type(), range(), sorted()
+
+# len()  --> devuelve el largo de un objeto
+texto = 'hola'
+print(f'El largo del texto "{texto}" es: {len(texto)}')
+
+# type() --> devuelve el tipo de objeto
+print(f'El tipo de la variable "{texto}" es: {type(texto)}')
+
+# range() --> Genera una secuencia de números. Devuelve un objeto especial tipo range.
+# 1 parametro
+print(f'range de 1 parametro valor 5: {list(range(5))}')
+# 2 parametros
+print(f'range de 2 parametro valor 1,5: {list(range(1,5))}')
+# 3 parametros
+print(f'range de 3 parametro valor 0,10,2: {list(range(0,10,2))}')
+
+
+#sorted() --> Devuelve una nueva lista ordenada a partir de un iterable (no modifica el original).
+palabra = 'hola mundo'
+numeros = [3,2,1,6,5,4,8,9,0]
+print (f'orden de letras de fase "hola mundo": {sorted(palabra)}')
+print (f'orden de numeros {numeros} --> {sorted(numeros)}')
+
+
 # - Funciones matemáticas: sum(), max(), min(), abs()
+print(f'suma de numeros {numeros} = {sum(numeros)}')
+print(f'máximo de la lista {numeros} = {max(numeros)}')
+print(f'minimo de la lista {numeros} = {min(numeros)}')
+print(f'valor absoluto del número -124 = {abs(-124)}')
+
 # - Funciones de comprobación: isinstance(), all(), any()
+# isinstance() --> Verifica si un objeto es instancia de un tipo específico.
+num = 10,5
+print(f'variable num es int = {isinstance(num, int)}')
+
+# all() --> Devuelve True si todos los elementos del iterable son verdaderos.
+a = True
+b = False
+print(f' las variables a y b son todas verdaderas?: {all([a,b])}')
+
+#any()
+print(f' las variables a y b hay alguna verdadera?: {any([a,b])}')
+
+
 # - Otras útiles: enumerate(), zip(), reversed()
+# enumerate() --> para cuando quiero saber el índice y el valor al mismo tiempo
+print('Ejemplo de enumerate():')
+for clave, valor in enumerate(numeros):
+    print (f'clave: {clave} / valor: {valor}')
+
+# zip() --> Une varios iterables elemento por elemento.
+nombres = ['ivan', 'karen', 'juan']
+edades = [50, 47, 83]
+personas = zip(nombres, edades)
+print (list(personas))
+
+# reversed() --> Solo invierte el orden actual
+print(f'revierte orden de la lista {nombres}, quedando asi {list(reversed(nombres))}')
+
 
 
 # 7️⃣ Funciones recursivas
